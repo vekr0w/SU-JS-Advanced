@@ -26,16 +26,15 @@ class Company {
       let totalSalary = employees
         .map(e => e.salary)
         .reduce((acc, curr) => acc += curr);
-      depAvrg[department] = totalSalary / employees.lenght;
-      console.log(employees);
-    });
-    let highestAvg;
-
-    Object.entries(depAvrg).forEach(([depAvrg,avgSalary])=>{
+      depAvrg[department] = totalSalary / Object.keys(employees).length;
 
     });
+    let bestDepartment = Object.keys(depAvrg).reduce((a, b) => depAvrg[a] > depAvrg[b] ? a : b);
+    // console.log(`Best department is: ${bestDepartment}`);
+    // console.log(`Average salary: ${depAvrg[bestDepartment]}`);
+    let bestEmp = {};
+    
   }
-
 
 
 }
@@ -50,7 +49,6 @@ c.addEmployee("Pesho", 1000, "graphical designer", "Marketing");
 c.addEmployee("Gosho", 1350, "HR", "Human resources");
 console.log(c.bestDepartment());
 
-// console.log(c);
 
 
 
