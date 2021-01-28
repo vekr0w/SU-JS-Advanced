@@ -11,15 +11,18 @@ print - print the stored string on the console
 function solution() {
   let string = '';
 
-  return function operators(command) {
-    
+  return function operations(input){
+    solution.append = (input) => string += str;
   }
+   
 }
 
 
 let firstZeroTest = solution();
 
-firstZeroTest.append('hello');
-firstZeroTest.append('again');
-firstZeroTest.removeStart(3);
-firstZeroTest.removeEnd(4);
+// firstZeroTest.append('hello');
+// firstZeroTest.append('again');
+// firstZeroTest.removeStart(3);
+// firstZeroTest.removeEnd(4);
+
+console.log();
